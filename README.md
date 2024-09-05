@@ -6,8 +6,8 @@ This is my first rice, but I got a good and stable result.
 - [Wallust](https://crates.io/crates/wallust) (for dynamic color palette based on wallpaper)
 - [SWWW](https://github.com/LGFae/swww) (Wallpaper deamon)
 - [JetBrains Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip)
-- [Playerctl](https://github.com/altdesktop/playerctl)
-- [Pipewire](https://pipewire.org/)
+- [Playerctl](https://github.com/altdesktop/playerctl) (CLI Audio util)
+- [Pipewire](https://pipewire.org/) (multimedia framework)
 - Custom scripts for audio management
 
 ## Keybinds
