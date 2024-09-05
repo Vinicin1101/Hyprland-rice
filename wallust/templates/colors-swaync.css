@@ -1,0 +1,13 @@
+@define-color text-color {{foreground}};
+@define-color background rgba({{color1 | rgb}}, 0.7);
+@define-color background-center rgba({{color1 | rgb}}, 0.8);
+@define-color background-alt {{color10}};
+@define-color cursor {{cursor}};
+@define-color hovered {{color12}};
+@define-color button-background {{color5}};
+@define-color button-active {{color2}};
+@define-color border-color {{color6}};
+@define-color urgent {{color15}};
+@define-color color1 {{color4}};
+@define-color color2 {{color5}};
+@define-color color3 {{color7}};

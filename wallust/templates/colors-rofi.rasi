@@ -1,0 +1,17 @@
+
+* {
+    font: "JetBrainsMono Nerd Font 10";
+    background-color: transparent;
+
+    foreground: {{color6}};
+    active-background: rgba({{color6 | rgb}}, 0.8);
+    urgent-background: {{color4}};
+    color: {{color6}};
+    prompt: {{color8}};
+    entry: {{color5}};
+    selected-background: {{color2}};
+    selected-urgent-background: @urgent-background;
+    selected-active-background: {{color8}};
+    separatorcolor: @active-background;
+    bordercolor: @selected-background;
+}

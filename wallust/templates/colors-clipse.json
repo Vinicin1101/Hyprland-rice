@@ -1,0 +1,16 @@
+{
+    "useCustomTheme": true,
+    "DimmedDesc": "{{foreground}}",
+    "DimmedTitle": "{{foreground}}",
+    "FilteredMatch": "{{color3}}",
+    "NormalDesc": "{{color2}}",
+    "NormalTitle": "{{color10}}",
+    "SelectedDesc": "{{color5}}",
+    "SelectedTitle": "{{color13}}",
+    "SelectedBorder": "{{color6}}",
+    "SelectedDescBorder": "{{color6}}",
+    "TitleFore": "{{color5}}",
+    "Titleback": "{{color2}}",
+    "StatusMsg": "{{color2}}",
+    "PinIndicatorColor": "{{color13}}"
+}

@@ -1,0 +1,162 @@
+{
+    "include": "$HOME/.config/waybar/wallust/clock-waybar",
+    "name": "main-bar",
+    "id": "main-bar",
+    "layer": "top",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "height": 50,
+    "width": 1920,
+    "fixed-center": true,
+    "ipc": false,
+    // Modules
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "network",
+        "custom/pipewire",
+        "custom/notification",
+        "clock#gar"
+    ],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            "focused": "",
+            "default": ""
+        }
+    },
+    // waybar-tray
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    // waybar-cpu
+    "cpu": {
+        "exec": "$HOME/.config/waybar/scripts/temp.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "󰻠 {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-double-click": "kitty 'bashtop'"
+    },
+    "custom/temp": {
+        "exec": "$HOME/.config/waybar/scripts/temp.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{}"
+    },
+    // waybar-memory
+    "memory": {
+        "interval": 5,
+        "format": " {used:0.1f}GB"
+    },
+    // Swaync / Notifications
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} {}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "",
+            "dnd-notification": "",
+            "dnd-none": "󰪑",
+            "inhibited-notification": "󱏪",
+            "inhibited-none": "󱏪",
+            "dnd-inhibited-notification": "",
+            "dnd-inhibited-none": "󰪑"
+        },
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "exec-if": "which swaync-client",
+        "on-click": "sh -c 'sleep 0.1s; swaync-client -t -sw; sleep 0.1s'",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    // Pipewire / Audio
+    "custom/pipewire": {
+        "exec": "$HOME/.config/waybar/scripts/sound/volume.sh -status",
+        "exec-if": true,
+        "format": "{icon}{}",
+        "return-type": "json",
+        "interval": 3,
+        "format-icons": {
+            "mute": "",
+            "playing": "",
+            "paused": "󰏦",
+            "default": ""
+        },
+        "max-length": 25,
+        "on-click-middle": "$HOME/.config/waybar/scripts/sound/volume.sh -mute",
+        "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-",
+        // Music controlls
+        "on-double-click": "exec playerctl next",
+        "on-double-click-right": "exec playerctl previous",
+        "on-click": "exec playerctl play-pause"
+    },
+    // Logo / Power / wallapers randomly
+    "custom/logo": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "exec wlogout",
+        "on-click-right": "kitty 'ranger'",
+        "on-click-middle": "$HOME/.config/waybar/scripts/wallpapers/random.sh"
+    },
+    // Power [inactive]
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+    // Window title
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 40,
+        "rewrite": {
+            "(.*) - Google Chrome": "$1",
+            "OBS (.*)": "OBS",
+            "vim (.*)": " $1",
+            "(.*) - zsh": " [$1]",
+            "(.*) - Visual Studio Code": "Visual Studio Code"
+        }
+    },
+    "custom/fiap": {
+        "exec": "hostname",
+        "format": "RM559144@{}"
+    },
+
+    "network": {
+        "interface": "enp3s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "󰛳",
+        "format-disconnected": "󰲛",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} - {ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "exec nm-connection-editor"
+    }
+}

@@ -1,0 +1,234 @@
+@import '../../.config/waybar/wallust/colors-waybar.css';
+
+* {
+	font-family: "JetBrainsMono Nerd Font Mono", "Iosevka Nerd Font", archcraft, sans-serif;
+	font-size: 13px;
+}
+
+window#waybar {
+	background-color: transparent;
+	color: @foreground;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	border: 1px solid @color11;
+	background: @color11;
+	opacity: 0.8;
+}
+
+window#waybar.empty #window {
+	border: none;
+}
+
+#waybar.empty #window {
+	background-color: transparent;
+}
+
+#workspaces button {
+	color: @color2;
+	margin: 6px 2px;
+	font-weight: bold;
+	border-radius: 4px;
+	background: @color13;
+}
+
+#workspaces button.active {
+	color: @color6;
+	background: @color2;
+}
+
+#workspaces button.urgent {
+	background: @color3;
+}
+
+#backlight {
+	color: @color0;
+	background-color: @color3;
+}
+
+#battery {
+	color: @color0;
+	background-color: @color11;
+}
+
+@keyframes blink {
+	to {
+		color: @color0;
+	}
+}
+
+#battery.critical:not(.charging) {
+	background-color: @color1;
+	color: @color1;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#clock {
+	color: @color6;
+	background-color: @color2;
+}
+
+#cpu {
+	color: @color0;
+	background-color: @color8;
+}
+
+#memory {
+	color: @color0;
+	background-color: @color9;
+}
+
+#disk {
+	color: @color0;
+	background-color: @color12;
+}
+
+#tray {
+	color: @color0;
+	background-color: @color14;
+}
+
+#tray>.passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+	-gtk-icon-effect: highlight;
+}
+
+#mpd {
+	background-color: @color6;
+}
+
+#mpd.disconnected {
+	background-color: @color1;
+}
+
+#mpd.stopped {
+	background-color: @color2;
+}
+
+#mpd.playing {
+	background-color: @color7;
+}
+
+#pulseaudio {
+	background-color: @color10;
+}
+
+#pulseaudio.bluetooth {
+	background-color: @color2;
+}
+
+#pulseaudio.muted {
+	background-color: @color0;
+}
+
+#network {
+  	color: @color1;
+	background-color: @color13;
+}
+
+#network.disconnected,
+#network.disabled {
+	color: @color3;
+}
+
+#custom-menu {
+	background-color: @color2;
+
+	margin-left: 6px;
+	
+	font-size: 16px;
+}
+
+#custom-power {
+	color: @color6;
+	background-color: @color1;
+
+	margin-right: 6px;
+}
+
+#custom-speed {
+	color: @color0;
+	background-color: @color5;
+
+	margin-right: 6px;
+}
+
+#custom-pipewire {
+	color: @color1;
+	background-color: @color6;
+
+	margin-right: 6px;
+}
+
+#custom-logo {
+	color: @color6;
+	background-color: @color1;
+
+	margin-right: 4px;
+	margin-left: 6px;
+}
+
+#custom-notification {
+	color: @color1;
+	background-color: @color11;
+	margin-right: 6px;
+}
+
+#custom-fiap {
+	background-color: @color11;
+}
+
+#custom-temp {
+	color: @color1;
+	background-color: @color6;
+	margin-right: 6px;
+}
+
+/** Common style **/
+#cpu,
+#mpd,
+#disk,
+#mode,
+#tray,
+#clock,
+#window,
+#memory,
+#battery,
+#network,
+#backlight,
+#pulseaudio,
+#custom-fiap,
+#custom-temp,
+#custom-logo,
+#custom-menu,
+#custom-power,
+#custom-speed,
+#custom-spotify,
+#custom-pipewire,
+#custom-swaylock,
+#custom-wallpapers,
+#custom-notification,
+#workspaces button {
+	min-width: 15px;
+	border-radius: .5em;
+	margin: .6em .3em;
+	padding: .5em .6em;
+}
+
+/* corner */
+#custom-logo, #clock{
+	margin: .6em .6em;
+}
