@@ -10,6 +10,9 @@ This is my first rice, but I got a good and stable result.
 - [Pipewire](https://pipewire.org/) (multimedia framework)
 - Custom scripts for audio management
 
+## Wallpapers
+> Some wallpapers [here](https://www.dropbox.com/scl/fo/ri8dvub93qzsub2zklz8o/AJ-5rH3zNBIhbNqo4eljV7U?rlkey=xg0j4l804ng2ofs9dybqmwr27&st=4ra44xw2&dl=0)
+
 ## Keybinds
 | Key  | Action  |
 |  ---  |  ---  |
