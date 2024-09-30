@@ -141,10 +141,6 @@
             "(.*) - Visual Studio Code": "Visual Studio Code"
         }
     },
-    "custom/fiap": {
-        "exec": "hostname",
-        "format": "RM559144@{}"
-    },
 
     "network": {
         "interface": "enp3s0",
