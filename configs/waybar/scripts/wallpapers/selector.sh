@@ -10,8 +10,8 @@ wallpapers_list=$(ls -1 "$wallpapers_dir"/*/ | grep -E 'jpg|png|gif|webp|jpeg' |
 
 
 # Rofi #
-current_wallpaper=$(swww query | awk '{print $8}' | sed -n "s/\/home\/serafim\/Pictures\/wallpapers\/\(.*\)\///g;p" | sed -E 's/(.jpg|.png|.gif|.webp|.jpeg)$//g')
-selected_wallpaper=$(echo "* $current_wallpaper
+current_wallpaper=$(swww query | awk '{print $8}' | sed -n "s/\// /g;p" | awk '{print $6}')
+selected_wallpaper=$(echo "[*] $current_wallpaper
 $wallpapers_list" | rofi -dmenu -p "Select your wallpaper")
 
 if [[ -z "$selected_wallpaper" ]]; then
