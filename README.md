@@ -12,9 +12,9 @@ This is my first rice, but I got a good and stable result.
 
 ## To do
 - [X] Grub theme
-- [ ] Script for installing dependencies
+- [ ] Script for install dependencies
 - [ ] Wallust template for VS Code
-- [ ] Starship
+- [X] Starship
 
 > if you have a suggestion, open an issue
 
