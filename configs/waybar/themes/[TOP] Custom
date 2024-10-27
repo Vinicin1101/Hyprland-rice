@@ -134,11 +134,16 @@
         "format": "{title}",
         "max-length": 40,
         "rewrite": {
-            "(.*) - Google Chrome": "$1",
+            "(.*) - Google Chrome": " $1",
+	    "(.*)Netflix(.*)": "󰝆 Neflix",
+	    "(.*)WhatsApp(.*)": " Zap-zap",
+	    "(.*)Alura(.*)": "󰋀 Alura",
+	    "(.*)YouTube(.*)": " YouTube",
             "OBS (.*)": "OBS",
             "vim (.*)": " $1",
             "(.*) - zsh": " [$1]",
-            "(.*) - Visual Studio Code": "Visual Studio Code"
+            "(.*) - Visual Studio Code": "󰨞 Visual Studio Code",
+	    "rofi - drun": "Launcher"
         }
     },
 
