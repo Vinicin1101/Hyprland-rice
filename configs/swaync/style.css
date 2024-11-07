@@ -1,1 +1,300 @@
-/home/serafim/.config/swaync/theme.css
+@import "./themes/wallust/colors-wallust.css";
+
+* {
+  all: unset;
+  font-size: 14px;
+  font-family: "Jet Brains Nerd Font";
+  transition: 200ms;
+}
+
+trough highlight {
+    background: @text-color;
+}
+
+scale trough {
+    margin: 0rem 1rem;
+    background-color: @background;
+    min-height: 8px;
+    min-width: 70px;
+}
+
+slider {
+    background-color: @color1;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  border-radius: 12.6px;
+  border: 1px solid @border-color;
+  margin: .25em;
+  background-color: @background-center;
+  color: @text-color;
+  padding: 5px;
+}
+
+.floating-notifications .notification-row .notification-background .notification .notification-content .summary {
+  color: @color1;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification {
+  border-radius: 12.6px;
+  padding: 1rem;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification.critical {
+  background-color: @background-alt;
+  opacity: 0.5;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action {
+  border-radius: 7px;
+  color: @text-color;
+  background-color: @background;
+  box-shadow: inset 0 0 0 1px @background-alt;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
+  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @background;
+  color: @text-color;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification>*:last-child>* .notification-action:active {
+  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @color2;
+  color: @text-color;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button {
+  border-radius: 6.3px;
+  color: @background-alt;
+  background-color: @urgent;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button:hover {
+  background-color: @urgent;
+  color: @background-alt;
+}
+
+.control-center {
+  box-shadow: 0 0 3px 0 @color1;
+  border-radius: 12.6px;
+  background-color: @background-center;
+  color: @text-color;
+  padding: 2em;
+  margin: 1rem;
+}
+
+.control-center .widget-title>label {
+  color: @color3;
+  font-size: 1.3em;
+}
+
+.control-center .widget-title button {
+  border-radius: 7px;
+  padding: .6em 1em;
+  color: @text-color;
+  background-color: @button-background;
+  box-shadow: inset 0 0 0 1px @background-alt;
+}
+
+.control-center .widget-title button:hover {
+  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @button-active;
+  color: @text-color;
+}
+
+.control-center .widget-title button:active {
+  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @button-active;
+  color: @background-alt;
+}
+
+.control-center .notification-row {
+  margin-top: 1em;
+}
+
+.control-center .notification-row .notification-background {
+  border-radius: 7px;
+  color: @text-color;
+  background-color: @background;
+  box-shadow: inset 0 0 0 1px @background-alt;
+}
+
+.control-center .notification-row .notification-background .notification {
+  border-radius: 7px;
+  background-color: @background;
+  border: 1px solid ;
+}
+
+.control-center .notification-row .notification-background .notification.critical {
+  border-left: 1px solid rgba(235,136,136,0.6);
+}
+
+.control-center .notification-row .notification-background .notification .notification-content {
+  margin: 7px;
+  padding: .7rem;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .summary {
+  color: @button-background;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .time {
+  color: @color1;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .body {
+  color: @text-color;
+}
+
+.control-center .notification-row .notification-background .notification>*:last-child>* {
+  min-height: 3.4em;
+}
+
+.control-center .notification-row .notification-background .notification>*:last-child>* .notification-action {
+  border-radius: 7px;
+  color: @text-color;
+  background-color: @background;
+  box-shadow: inset 0 0 0 1px @background-alt;
+}
+
+.control-center .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
+  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @background;
+  color: @text-color;
+}
+
+.control-center .notification-row .notification-background .notification>*:last-child>* .notification-action:active {
+  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @background;
+  color: @text-color;
+}
+
+.control-center .notification-row .notification-background .close-button {
+  border-radius: 6.3px;
+  color: @button-background;
+  background-color: @urgent;
+}
+
+.close-button {
+  border-radius: 6.3px;
+}
+
+.control-center .notification-row .notification-background .close-button:hover {
+  background-color: @urgent;
+  color: @button-active;
+}
+
+.control-center .notification-row .notification-background:hover {
+  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @background-alt;
+  color: @text-color;
+}
+
+.notification.critical progress {
+  background-color: #cc2222;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: @color1;
+}
+
+.control-center-dnd {
+  color: @color3;
+  border-radius: 8px;
+  background: @background;
+  border: 1px solid @color3;
+  box-shadow: none;
+}
+
+.control-center-dnd:checked {
+  background: @color3;
+}
+
+.control-center-dnd slider {
+  background: @background-alt;
+  border-radius: 8px;
+}
+
+.widget-dnd {
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+  color: @color3;
+}
+
+.widget-dnd>switch {
+  color: @color3;
+  font-size: initial;
+  border-radius: 8px;
+  /* border: 1px solid @button-background; */
+  background: @background-alt;
+  box-shadow: none;
+}
+
+.widget-dnd>switch slider {
+  background: @button-active;
+  border-radius: 8px;
+}
+.widget-dnd>switch:checked {
+  color: @button-background;
+}
+
+.widget-dnd>switch:checked slider {
+  background: @button-background;
+}
+.widget-mpris .widget-mpris-player {
+    background: @background;
+    border-radius: 12.6px;
+    border: .5px solid @color3;
+    padding: .7em;
+}
+
+.widget-mpris .widget-mpris-title {
+    font-size: 1.5rem;
+}
+
+.widget-mpris .widget-mpris-subtitle {
+    font-size: 0.8rem;
+}
+
+.widget-menubar>box>.menu-button-bar>button>label {
+    font-size: 3rem;
+}
+
+.widget-menubar>box>.menu-button-bar>:last-child {
+    color: @urgent;
+}
+
+.power-buttons button:hover,
+.powermode-buttons button:hover,
+.screenshot-buttons button:hover {
+    background: @background;
+}
+
+.control-center .widget-label>label {
+  color: @text-color;
+  font-size: 2rem;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button label {
+    font-size: 2.5rem;
+}
+
+.widget-volume label {
+    font-size: 1.5rem;
+    color: @color2;
+}
+
+.widget-volume trough highlight {
+    background: @color2;
+}
+
+.widget-backlight trough highlight {
+    background: @color3;
+}
+
+.widget-backlight label {
+    font-size: 1.5rem;
+    color: @color3;
+}
