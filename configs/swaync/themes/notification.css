@@ -1,4 +1,4 @@
-@import "../wallust/colors-wallust.css";
+@import "./wallust/colors-wallust.css";
 
 * {
 	color: @text-color;

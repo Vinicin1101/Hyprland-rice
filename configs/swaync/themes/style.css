@@ -1,8 +1,8 @@
 /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 /* swaync colors - wallust from waybar.css */
 
-@import '../../.config/waybar/wallust/colors-waybar.css';
-@import './wallust/colors-wallust.css';
+@import '../../../.config/waybar/wallust/colors-waybar.css';
+@import './themes/wallust/colors-wallust.css';
 @import './themes/notificatio.css';
 
 @define-color noti-border-color @color12;
