@@ -12,9 +12,10 @@ This is my first rice, but I got a good and stable result.
 
 ## To do
 - [X] Grub theme
-- [ ] Script for install dependencies
-- [ ] Wallust template for VS Code
 - [X] Starship
+- [ ] Adjust swaync style
+- [ ] Auto install script
+- [ ] Wallust template for VS Code
 
 > if you have a suggestion, open an issue
 
@@ -36,8 +37,8 @@ Some wallpapers [here](https://www.dropbox.com/scl/fo/ri8dvub93qzsub2zklz8o/AJ-5
 #### Content management
 | Key  | Action  |
 |  ---  |  ---  |
-|  Super + Space  |  Kill active app  |
 |  Super + Arrows  |  Change focus  |
+|  Super + Space  |  Kill active app  |
 |  Super + Scroll or [0-9]  |  Switch to workspace  |
 |  Super + Shift + [0-9]  |  Move app to workspace  |
 
@@ -47,6 +48,9 @@ Some wallpapers [here](https://www.dropbox.com/scl/fo/ri8dvub93qzsub2zklz8o/AJ-5
 |  Super + P  |  Toggle pseudo float  |
 |  Super + F  |  Toggle float  |
 |  Super + J  |  Toggle split  |
+|  Super + Shift + F  |  Toggle fullscreen  |
+|  Super + Shift + Arrows  |  Move active window  |
+|  Super + Alt + Arrows  |  Resize active window  |
 
 
 #### Media keys
