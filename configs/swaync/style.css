@@ -24,7 +24,7 @@ slider {
 
 .floating-notifications.background .notification-row .notification-background {
   border-radius: 12.6px;
-  border: 1px solid @border-color;
+  border: 1px solid @color3;
   margin: .25em;
   background-color: @background-center;
   color: @text-color;
@@ -76,7 +76,7 @@ slider {
 }
 
 .control-center {
-  box-shadow: 0 0 3px 0 @color1;
+  box-shadow: 0 0 3px 0 @color2;
   border-radius: 12.6px;
   background-color: @background-center;
   color: @text-color;
@@ -93,13 +93,12 @@ slider {
   border-radius: 7px;
   padding: .6em 1em;
   color: @text-color;
-  background-color: @button-background;
-  box-shadow: inset 0 0 0 1px @background-alt;
+  background-color: @button-active;
+  border: 1px solid @color3;
 }
 
 .control-center .widget-title button:hover {
-  box-shadow: inset 0 0 0 1px @background-alt;
-  background-color: @button-active;
+  background-color: @button-background;
   color: @text-color;
 }
 
@@ -127,7 +126,7 @@ slider {
 }
 
 .control-center .notification-row .notification-background .notification.critical {
-  border-left: 1px solid rgba(235,136,136,0.6);
+  border: 1px solid rgba(235,136,136,0.6);
 }
 
 .control-center .notification-row .notification-background .notification .notification-content {
@@ -227,7 +226,6 @@ slider {
   color: @color3;
   font-size: initial;
   border-radius: 8px;
-  /* border: 1px solid @button-background; */
   background: @background-alt;
   box-shadow: none;
 }
@@ -243,6 +241,7 @@ slider {
 .widget-dnd>switch:checked slider {
   background: @button-background;
 }
+
 .widget-mpris .widget-mpris-player {
     background: @background;
     border-radius: 12.6px;
@@ -297,4 +296,50 @@ slider {
 .widget-backlight label {
     font-size: 1.5rem;
     color: @color3;
+}
+
+.widget-buttons-grid {
+  border-radius: 1.159rem;
+  -gtk-outline-radius: 1.159rem;
+  padding: 0.341rem;
+  background-color: rgba(28, 28, 34, 0.35);
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.widget-buttons-grid>flowbox {
+  padding: unset;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:first-child {
+  margin-left:unset ;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  border:none;
+  background-color: unset;
+  border-radius: 12.6px;
+  padding: unset;
+  margin: unset;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button label {
+  font-size: 1.5rem;
+  color: @color3;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background-color: transparent;
+  padding: 0.35rem 0.5rem;
+  margin: 0.5rem;
+  transition: all 0.5s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  box-shadow: 0 0 5px @color2;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:checked {
+  background-color: @color1;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:checked label {
+  color: #14141B;
 }

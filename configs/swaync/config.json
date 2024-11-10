@@ -12,7 +12,7 @@
 	"control-center-margin-left": 0,
   	"notification-2fa-action": true,
   	"notification-inline-replies": false,
-	"notification-icon-size": 24,
+	"notification-icon-size": 20,
 	"notification-body-image-height": 100,
 	"notification-body-image-width": 200,
 	"timeout": 6,
@@ -29,6 +29,7 @@
 	"hide-on-action": true,
 	"script-fail-notify": true,
 	"widgets": [
+		"buttons-grid",
 		"dnd",
 		"mpris",
 		"title",
@@ -69,15 +70,11 @@
         	        },
 	                {
 	                    "label": "󰌾",
-	                    "command": "~/.config/hypr/scripts/LockScreen.sh"
+	                    "command": "$HOME/.config/waybar/scripts/lock.sh"
 	                },
 	                {
         	            "label": "󰍃",
                 	    "command": "hyprctl dispatch exit"
-	                },
-	                {
-	                    "label": "󰀝",
-	                    "command": "~/.config/hypr/scripts/AirplaneMode.sh"
 	                },
         	        {
 	                   "label": "󰕾",
