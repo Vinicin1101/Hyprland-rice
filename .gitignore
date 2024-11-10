@@ -1,3 +1,12 @@
 configs/hypr/wallust/wallust-hyprland.conf
 configs/waybar/wallust/clock-waybar
 configs/waybar/wallust/colors-waybar.css
+configs/clipse/tmp_files/
+configs/clipse/clipboard_history.json
+configs/rofi/wallust/colors-rofi.rasi
+configs/swaync/themes/wallust/colors-wallust.css
+configs/waybar/wallust/clock-waybar
+configs/waybar/wallust/colors-waybar.css
+configs/hypr/wallust/wallust-hyprland.conf
+configs/rofi/wallust/colors-rofi.rasi
+configs/swaylock/config
