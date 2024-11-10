@@ -19,7 +19,7 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "network",
+        "network#speed",
         "custom/pipewire",
         "custom/notification",
         "clock#gar"
@@ -113,7 +113,8 @@
         // Music controlls
         "on-double-click": "exec playerctl next",
         "on-double-click-right": "exec playerctl previous",
-        "on-click": "exec playerctl play-pause"
+        "on-click": "exec playerctl play-pause",
+	"on-click-right": "exec playerctl -p spotify play-pause"
     },
     // Logo / Power / wallapers randomly
     "custom/logo": {
@@ -147,8 +148,7 @@
         }
     },
 
-    "network": {
-        "interface": "enp3s0",
+    "network": { 
         "format": "{ifname}",
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "󰛳",
@@ -159,5 +159,20 @@
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
         "on-click": "exec nm-connection-editor"
-    }
+    },
+
+    "network#speed": {
+       "interval": 2,
+       "format": "{ifname}",
+       "format-wifi": "{icon} {essid}",
+       "format-ethernet": "󰛳",
+       "format-disconnected": "󰲛", 
+       "tooltip-format": "{ipaddr}",
+       "format-linked": "󰈁 {ifname} (No IP)",
+       "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+       "tooltip-format-ethernet": "󰛳 {ifname} ({ipaddr})  {bandwidthUpBytes}  {bandwidthDownBytes}",
+       "tooltip-format-disconnected": "󰲛 Disconnected",
+       "max-length": 50,
+       "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+   }
 }
