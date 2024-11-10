@@ -47,16 +47,19 @@ kitty.template = 'templates/colors-kitty.conf'
 kitty.target = '~/.config/kitty/kitty.conf'
 
 swaync.template = 'templates/colors-swaync.css'
-swaync.target = '~/.config/swaync/wallust/colors-wallust.css'
+swaync.target = '~/.config/swaync/themes/wallust/colors-wallust.css'
 
 swaylock.template = 'templates/colors-swaylock'
 swaylock.target = '~/.config/swaylock/config'
 
-# wofi.template = 'templates/colors-wofi.css'
-# wofi.target = '~/.config/wofi/wallust.css'
+wofi.template = 'templates/colors-wofi.css'
+wofi.target = '~/.config/wofi/wallust.css'
 
 rofi.template = 'templates/colors-rofi.rasi'
 rofi.target = '~/.config/rofi/wallust/colors-rofi.rasi'
 
 clipse.template = 'templates/colors-clipse.json'
 clipse.target = '~/.config/clipse/wallust_theme.json'
+
+bashtop.template = 'templates/colors-bashtop.theme'
+bashtop.target = '~/.config/bashtop/user_themes/wallust.theme'
