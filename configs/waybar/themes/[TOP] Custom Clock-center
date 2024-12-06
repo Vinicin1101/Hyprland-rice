@@ -13,16 +13,16 @@
     // Modules
     "modules-left": [
         "custom/logo",
-	    "group/spaces"
+	"group/spaces",
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock#gar"
     ],
     "modules-right": [
         "group/wireless",
         "custom/pipewire",
         "custom/notification",
-        "clock#gar"
     ],
     // Modules configuration
     "hyprland/workspaces": {

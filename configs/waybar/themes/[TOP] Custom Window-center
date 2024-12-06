@@ -13,7 +13,7 @@
     // Modules
     "modules-left": [
         "custom/logo",
-	    "group/spaces"
+	"group/spaces"
     ],
     "modules-center": [
         "hyprland/window"

@@ -13,10 +13,10 @@
     // Modules
     "modules-left": [
         "custom/logo",
-	    "group/spaces"
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+	"group/spaces"
     ],
     "modules-right": [
         "group/wireless",

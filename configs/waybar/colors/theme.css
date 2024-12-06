@@ -32,10 +32,9 @@ window#waybar.empty #window {
 
 #workspaces button {
 	color: @color2;
-	margin: 6px 2px;
-	font-weight: bold;
+	margin: .1em .2em;
+	padding: .3em;
 	border-radius: 4px;
-	background: @color13;
 }
 
 #workspaces button.active {
@@ -134,7 +133,7 @@ window#waybar.empty #window {
 	background-color: @color0;
 }
 
-#network {
+/* #network {
   	color: @color1;
 	background-color: @color13;
 }
@@ -142,7 +141,7 @@ window#waybar.empty #window {
 #network.disconnected,
 #network.disabled {
 	color: @color3;
-}
+} */
 
 #custom-menu {
 	background-color: @color2;
@@ -191,10 +190,29 @@ window#waybar.empty #window {
 	background-color: @color11;
 }
 
+#custom-host{
+	background-color: @color6;
+}
+
 #custom-temp {
 	color: @color1;
 	background-color: @color6;
 	margin-right: 6px;
+}
+
+/* #bluetooth {
+	color: @color5;
+	background-color: @color1;
+}*/
+
+#wireless {
+	color: @color1;
+	background-color: @color13;
+}
+
+#spaces {
+	color: @color2;
+	background-color: @color12;
 }
 
 /** Common style **/
@@ -207,28 +225,44 @@ window#waybar.empty #window {
 #window,
 #memory,
 #battery,
-#network,
+#wireless,
+#spaces,
 #backlight,
 #pulseaudio,
 #custom-fiap,
 #custom-temp,
 #custom-logo,
 #custom-menu,
+#custom-host,
 #custom-power,
 #custom-speed,
 #custom-spotify,
 #custom-pipewire,
 #custom-swaylock,
 #custom-wallpapers,
-#custom-notification,
-#workspaces button {
+#custom-notification
+{ 
 	min-width: 15px;
 	border-radius: .5em;
 	margin: .6em .3em;
+	padding: .3em .6em;
+}
+
+/* adding more padding on the sides, I tried to do it the easy way (it didn't work) */
+window#waybar box.horizontal.modules-left > widget:first-child > label{ 
+	margin-left: .6em;
+	margin-right: .3em;
+}
+window#waybar box.horizontal.modules-right > widget:last-child > label{ 
+	margin-left: .3em;
+	margin-right: .6em;
+}
+
+/* group members */
+#network, #bluetooth {
 	padding: .5em .6em;
 }
 
-/* corner */
-#custom-logo, #clock{
-	margin: .6em .6em;
+#spaces {
+	padding: .3em;
 }
