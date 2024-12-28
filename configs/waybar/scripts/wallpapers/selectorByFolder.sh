@@ -16,7 +16,7 @@ styles=$(ls -1 "$wallpapers_dir") || {
 ###################
 # Rofi style menu #
 ###################
-selected_style=$(echo "[*] $current_wallpaper
+selected_style=$(echo "󰄲 $current_wallpaper
 $styles" | rofi -dmenu -p "Select style")
 
 if [[ -z "$selected_style" ]]; then
@@ -33,12 +33,19 @@ wallpapers_list=$(ls -1 "$wallpapers_dir/$selected_style" | grep -E 'jpg|png|gif
 ########################
 # Rofi wallpapers menu #
 ########################
-selected_wallpaper=$(echo "[*] $current_wallpaper
+selected_wallpaper=$(
+echo "󰄲 $current_wallpaper
+  Random
 $wallpapers_list" | rofi -dmenu -p "Select wallpaper")
 
 # No wallpaper
 if [[ -z "$selected_wallpaper" ]]; then
   exit 1
+fi
+
+if [[ $selected_wallpaper =~  "Random" ]]; then
+  "$HOME/.config/waybar/scripts/wallpapers/random.sh" "$selected_style"
+  exit 0
 fi
 
 # Reconstruct the path
