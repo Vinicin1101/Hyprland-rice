@@ -6,7 +6,6 @@
     "exclusive": true,
     "passthrough": false,
     "position": "top",
-    "height": 50,
     "width": 1920,
     "fixed-center": true,
     "ipc": false,
@@ -30,18 +29,9 @@
         "on-click": "activate",
         "all-outputs": true,
         "format-icons": {
-            "1": "一",
-            "2": "二",
-            "3": "三",
-            "4": "四",
-            "5": "五",
-            "6": "六",
-            "7": "七",
-            "8": "八",
-            "9": "九",
-            "10": "十",
-            "focused": "",
-            "default": ""
+	    "urgent": "",
+            "active": "",
+            "default": ""
         }
     },
     // waybar-tray
@@ -77,14 +67,14 @@
         "tooltip": false,
         "format": "{icon} {}",
         "format-icons": {
-            "notification": "󱅫",
-            "none": "",
+            "notification": "",
+            "none": "",
             "dnd-notification": "",
-            "dnd-none": "󰪑",
+            "dnd-none": "",
             "inhibited-notification": "󱏪",
             "inhibited-none": "󱏪",
             "dnd-inhibited-notification": "",
-            "dnd-inhibited-none": "󰪑"
+            "dnd-inhibited-none": ""
         },
         "return-type": "json",
         "exec": "swaync-client -swb",
@@ -102,8 +92,8 @@
         "interval": 3,
         "format-icons": {
             "mute": "",
-            "playing": "",
-            "paused": "󰏦",
+            "playing": "",
+            "paused": "",
             "default": ""
         },
         "max-length": 25,
@@ -147,11 +137,11 @@
 	    "rofi - drun": "Launcher"
         }
     },
-
+    // Network
     "network#speed": {
        "interval": 2,
        "format": "{ifname}",
-       "format-wifi": "{icon}",
+       "format-wifi": "",
        "format-ethernet": "󰛳",
        "format-disconnected": "󰲛", 
        "tooltip-format": "{ipaddr}",
@@ -160,10 +150,9 @@
        "tooltip-format-ethernet": "󰛳 {ifname} | {ipaddr}",
        "tooltip-format-disconnected": "󰲛 Disconnected",
        "max-length": 50,
-       "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+       "format-icons": ["󰤟","󰤢","󰤥","󰤨"],
        "on-click": "exec kitty nmtui"
    },
-    
    "bluetooth": {
       "format": "",
       "format-disabled": "󰂲",
