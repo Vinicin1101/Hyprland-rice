@@ -11,7 +11,9 @@ get_volume_status() {
 
 # Check music status
 music_status() {
-    player_status=$(playerctl status 2 > /dev/null)
+    player_status=$(playerctl status 2>/dev/null)
+    # escape
+    escaped_title=$(printf '%s' "$player_status" | jq -Rs .)
 
     if [[ "$player_status" != "Stopped" ]]; then
         echo "true $player_status"
@@ -21,8 +23,6 @@ music_status() {
 }
 
 while [ $# -gt 0 ] ; do
-    alt="default"
-    
     case "$1" in
         -mute)
             wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -40,19 +40,22 @@ while [ $# -gt 0 ] ; do
     tooltip="Volume: $(echo "$volume_percent")%"
 
     # Music status
-    read -r status music_status <<< $(music_status)
-
-    if [ $status == true  ]; then
+    read -r isRunning musicStatus <<< $(music_status) 
+	
+    if [ $isRunning == true  ]; then
         title=$(playerctl metadata title)
         artist=$(playerctl metadata artist)
+	# anti
+	title=${title//\"/\'}
+	artist=${artist//\"/\'}
 
         if [ ${#title} -gt 2 ]; then
 
             MainArtist=$(echo $artist | awk -F',' '{print $1}')
 
-            if [ "$music_status" == "Playing" ]; then
+            if [ "$musicStatus" != "Playing" ]; then
                 alt="playing"
-            elif [ "$music_status" == "Paused" ]; then
+            elif [ "$musicStatus" != "Paused" ]; then
                 alt="paused"
             fi
 
