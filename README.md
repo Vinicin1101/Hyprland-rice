@@ -13,7 +13,8 @@ This is my first rice, but I got a good and stable result.
 ## To do
 - [X] Grub theme
 - [X] Starship
-- [ ] Adjust swaync style
+- [x] Adjust swaync style
+- [ ] ~~Auto~~ sync script
 - [ ] Auto install script
 - [ ] Wallust template for VS Code
 
@@ -51,15 +52,18 @@ Some wallpapers [here](https://www.dropbox.com/scl/fo/ri8dvub93qzsub2zklz8o/AJ-5
 |  Super + Shift + F  |  Toggle fullscreen  |
 |  Super + Shift + Arrows  |  Move active window  |
 |  Super + Alt + Arrows  |  Resize active window  |
+|  Super + Shift + 0  |  move to magic space (minimize window)  |
 
 
 #### Media keys
 | Key  | Action  |
 |  ---  |  ---  |
-|  Super + Audio Play  |  Toggle play/pause  |
-|  Super + Audio Mute  |  Toggle mute  |
-|  Super + Audio Next  |  Next song  |
-|  Super + Audio Prev  |  Previous song  |
+|  Fn + Audio Play  |  Toggle play/pause  |
+|  Fn + Audio Mute  |  Toggle mute  |
+|  Fn + Audio Next  |  Next song  |
+|  Fn + Audio Prev  |  Previous song  |
+|  Fn + Vol raise  |  Increase volume  |
+|  Fn + Vol lower  |  Decrease volume  |
 
 
 ## Demo
