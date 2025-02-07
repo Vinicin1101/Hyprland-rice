@@ -6,3 +6,5 @@ configs/clipse/clipboard_history.json
 configs/rofi/wallust/colors-rofi.rasi
 configs/swaync/themes/wallust/colors-wallust.css
 configs/swaylock/config
+configs/cava/config
+configs/clipse/wallust_theme.json

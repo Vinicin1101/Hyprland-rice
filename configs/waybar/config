@@ -1,1 +1,21 @@
-/home/serafim/.config/waybar/themes/[TOP] Custom
+{
+    // Load Modules
+    "include": [
+        "$HOME/.config/waybar/settings.json",
+        "$HOME/.config/waybar/modules.json",
+        "$HOME/.config/waybar/wallust/clock-waybar.json"
+    ],
+    "modules-left": [
+        "custom/logo",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "group/spaces"
+    ],
+    "modules-right": [
+        "group/wireless",
+        "custom/pipewire",
+        "custom/notification",
+        "clock#gar"
+    ],
+}
