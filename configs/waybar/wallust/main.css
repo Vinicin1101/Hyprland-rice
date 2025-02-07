@@ -6,42 +6,17 @@
 }
 
 /** Common style **/
-#cpu,
-#mpd,
-#disk,
-#mode,
-#tray,
-#clock,
-#window,
-#memory,
-#spaces,
-#battery,
-#network,
-#wireless,
-#bluetooth,
-#backlight,
-#pulseaudio,
-#custom-temp,
-#custom-logo,
-#custom-menu,
-#custom-power,
-#custom-speed,
-#custom-pipewire,
-#custom-swaylock,
-#custom-wallpapers,
-#custom-notification
-{ 
+label,
+#wireless {
 	min-width: 1.5em;
 	border-radius: .9em;
-	margin: .3em;
-	padding: .1em .6em;
+	margin: .6em .3em;
+	padding: .2em .6em;
 }
 
 window#waybar {
 	background-color: transparent;
 	color: @foreground;
-	transition-property: background-color;
-	transition-duration: .5s;
 }
 
 window#waybar.hidden {
@@ -62,21 +37,33 @@ window#waybar.empty #window {
 }
 
 #spaces {
+	margin: .6em .3em;
+	border-radius: 12px;
 	background-color: @color12;
 }
 
+#workspaces button label{
+	margin: 0; 
+	padding: 0;
+}
+
 #workspaces button {
-	color: @color3;
-	margin: .2em .1em;
-	padding: .1em;
+	padding: 0;
+	margin: 3px;
+	min-width: 2em;
+	border-radius: 12px;
+	background-color: @color4;
+	opacity: 0.8;
+	font-size: 13px;
+	transition: all 0.3s ease-in;
 }
 
 #workspaces button.active {
-	color: @color2;
-}
-
-#workspaces button.urgent {
-	color: @color13;
+	border-radius: 10px;
+	min-width: 4em;
+	background-color: @color3;
+	opacity: 1;
+	transition: all 0.3s ease-out;
 }
 
 #backlight {
@@ -157,7 +144,7 @@ window#waybar.empty #window {
 	background-color: @color2;
 
 	margin-left: 6px;
-	
+
 	font-size: 16px;
 }
 
@@ -178,6 +165,8 @@ window#waybar.empty #window {
 #custom-pipewire {
 	color: @color1;
 	background-color: @color6;
+
+	transition: all 1s 5s ease-in-out;
 }
 
 #custom-logo {
@@ -188,7 +177,7 @@ window#waybar.empty #window {
 #custom-notification {
 	color: @color1;
 	background-color: @color11;
-	
+
 	margin-right: 6px;
 }
 
@@ -209,11 +198,12 @@ window#waybar.empty #window {
 }
 
 /* adding more padding on the sides, I tried to do it the easy way (it didn't work) */
-window#waybar box.horizontal.modules-left > widget:first-child > label{ 
-	margin-left: .6em;
+window#waybar box.horizontal.modules-left>widget:first-child>label {
+	margin-left: .9em;
 	margin-right: .3em;
 }
-window#waybar box.horizontal.modules-right > widget:last-child > label{ 
+
+window#waybar box.horizontal.modules-right>widget:last-child>label {
 	margin-left: .3em;
-	margin-right: .6em;
+	margin-right: .9em;
 }

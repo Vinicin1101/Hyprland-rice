@@ -1,0 +1,171 @@
+{
+    // Workspaces
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "default": ""
+        }
+    },
+    // Global Solution
+    "custom/host": {
+        "exec": "echo $USER@$(uname -n)",
+        "format": "{}"
+    },
+    "custom/fiap": {
+        "format": "RM559144"
+    },
+    // Meter
+    "cpu": {
+        "exec": "$HOME/.config/waybar/scripts/temp.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "󰻠 {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-double-click": "kitty 'bashtop'"
+    },
+    "custom/temp": {
+        "exec": "$HOME/.config/waybar/scripts/temp.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{}"
+    },
+    "memory": {
+        "interval": 5,
+        "format": " {used:0.1f}GB"
+    },
+    // Swaync / Notifications
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} {}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "",
+            "dnd-notification": "",
+            "dnd-none": "󰪑",
+            "inhibited-notification": "󱏪",
+            "inhibited-none": "󱏪",
+            "dnd-inhibited-notification": "",
+            "dnd-inhibited-none": "󰪑"
+        },
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "exec-if": "which swaync-client",
+        "on-click": "sh -c 'sleep 0.1s; swaync-client -t -sw; sleep 0.1s'",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    // Pipewire / Audio
+    "custom/pipewire": {
+        "exec": "$HOME/.config/waybar/scripts/sound/volume.sh -status",
+        "exec-if": true,
+        "format": "{icon}{}",
+        "return-type": "json",
+        "interval": 3,
+        "format-icons": {
+            "mute": "",
+            "playing": "",
+            "paused": "󰏦",
+            "default": ""
+        },
+        "max-length": 25,
+        "on-click-middle": "$HOME/.config/waybar/scripts/sound/volume.sh -mute",
+        "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-",
+        // Music controlls
+        "on-double-click": "exec playerctl next",
+        "on-double-click-right": "exec playerctl previous",
+        "on-click": "exec playerctl play-pause",
+        "on-click-right": "exec playerctl -p spotify play-pause"
+    },
+    // Logo / Power / wallapers randomly
+    "custom/logo": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "exec wlogout",
+        "on-click-right": "kitty 'ranger'",
+        "on-click-middle": "$HOME/.config/waybar/scripts/wallpapers/random.sh"
+    },
+    // Power [inactive]
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+    // Window title
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 30,
+        "rewrite": {
+            "(.*) - Google Chrome": " $1",
+            "(.*)Netflix(.*)": "󰝆 Neflix",
+            "(.*)WhatsApp(.*)": " Zap-zap",
+            "(.*)Alura(.*)": "󰋀 Alura",
+            "(.*)YouTube(.*)": " YouTube",
+            "OBS (.*)": "OBS",
+            "vim (.*)": " $1",
+            "(.*) - zsh": " [$1]",
+            "(.*) - Visual Studio Code": "󰨞 Visual Studio Code",
+            "rofi - drun": "Launcher"
+        }
+    },
+    // Connectivity
+    "network#speed": {
+        "interval": 2,
+        "format": "{ifname}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰛳",
+        "format-disconnected": "󰲛",
+        "tooltip-format": "{ipaddr}",
+        "format-linked": "󰈁 {ifname} (No IP)",
+        "tooltip-format-wifi": "{essid} | {icon} {signalStrength}%",
+        "tooltip-format-ethernet": "󰛳 {ifname} | {ipaddr}",
+        "tooltip-format-disconnected": "󰲛 Disconnected",
+        "max-length": 50,
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "on-click": "exec kitty nmtui"
+    },
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "format-connected": "󰂱",
+        "tooltip-format-connected": "\tDevices\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "exec kitty bluetoothctl"
+    },
+    // Groups
+    "custom/separator#line": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+    "group/wireless": {
+        "orientation": "horizontal",
+        "modules": [
+            "network#speed",
+            "custom/separator#line",
+            "bluetooth"
+        ]
+    },
+    "group/spaces": {
+        "orientatio": "horizontal",
+        "modules": [
+            "hyprland/workspaces"
+        ]
+    }
+}

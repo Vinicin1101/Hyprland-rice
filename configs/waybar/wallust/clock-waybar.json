@@ -1,0 +1,33 @@
+{   
+    // If you want modify the clock, check if you are editing the wallust template
+
+    // waybar-clock
+    "clock#gar": {
+        "interval": 1,
+        //"format": "{:%A, %I:%M %P}",
+        "format": "{:%a %d | %H:%M}",
+        "format-alt": "{:%A, %d %B, %Y 一 %H:%M:%S}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#5F5475'>{}</span>",
+                "days": "<span color='#DCC3D8'>{}</span>",
+                "weeks": "<span color='#5F5475'>{}</span>",
+                "weekdays": "<span color='#5F5475'>{}</span>",
+                "today": "<span color='#7C668C'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    }
+}

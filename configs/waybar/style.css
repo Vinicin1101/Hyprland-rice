@@ -1,1 +1,209 @@
-/home/serafim/.config/waybar/colors/theme.css
+@import '../../.config/waybar/wallust/colors-waybar.css';
+
+* {
+	font-family: FontAwesome, "JetBrainsMono Nerd Font", Helvetica, Roboto, sans-serif;
+	font-size: 13px;
+}
+
+/** Common style **/
+label,
+#wireless {
+	min-width: 1.5em;
+	border-radius: .9em;
+	margin: .6em .3em;
+	padding: .2em .6em;
+}
+
+window#waybar {
+	background-color: transparent;
+	color: @foreground;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	border: 1px solid @color11;
+	background: @color11;
+}
+
+window#waybar.empty #window {
+	border: none;
+}
+
+#waybar.empty #window {
+	background-color: transparent;
+}
+
+#spaces {
+	margin: .6em .3em;
+	border-radius: 12px;
+	background-color: @color12;
+}
+
+#workspaces button label{
+	margin: 0; 
+	padding: 0;
+}
+
+#workspaces button {
+	padding: 0;
+	margin: 3px;
+	min-width: 2em;
+	border-radius: 12px;
+	background-color: @color4;
+	opacity: 0.8;
+	font-size: 13px;
+	transition: all 0.3s ease-in;
+}
+
+#workspaces button.active {
+	border-radius: 10px;
+	min-width: 4em;
+	background-color: @color3;
+	opacity: 1;
+	transition: all 0.3s ease-out;
+}
+
+#backlight {
+	color: @color0;
+	background-color: @color3;
+}
+
+#battery {
+	color: @color0;
+	background-color: @color11;
+}
+
+@keyframes blink {
+	to {
+		color: @color0;
+	}
+}
+
+#battery.critical:not(.charging) {
+	background-color: @color1;
+	color: @color1;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#clock {
+	color: @color6;
+	background-color: @color2;
+}
+
+#cpu {
+	color: @color0;
+	background-color: @color8;
+}
+
+#memory {
+	color: @color0;
+	background-color: @color9;
+}
+
+#disk {
+	color: @color0;
+	background-color: @color12;
+}
+
+#mpd {
+	background-color: @color6;
+}
+
+#mpd.disconnected {
+	background-color: @color1;
+}
+
+#mpd.stopped {
+	background-color: @color2;
+}
+
+#mpd.playing {
+	background-color: @color7;
+}
+
+#pulseaudio {
+	background-color: @color10;
+}
+
+#pulseaudio.bluetooth {
+	background-color: @color2;
+}
+
+#pulseaudio.muted {
+	background-color: @color0;
+}
+
+#custom-menu {
+	background-color: @color2;
+
+	margin-left: 6px;
+
+	font-size: 16px;
+}
+
+#custom-power {
+	color: @color6;
+	background-color: @color1;
+
+	margin-right: 6px;
+}
+
+#custom-speed {
+	color: @color0;
+	background-color: @color5;
+
+	margin-right: 6px;
+}
+
+#custom-pipewire {
+	color: @color1;
+	background-color: @color6;
+
+	transition: all 1s 5s ease-in-out;
+}
+
+#custom-logo {
+	color: @color6;
+	background-color: @color1;
+}
+
+#custom-notification {
+	color: @color1;
+	background-color: @color11;
+
+	margin-right: 6px;
+}
+
+#custom-temp {
+	color: @color1;
+	background-color: @color6;
+}
+
+/* Wireless group (wifi & bluetooth) */
+#wireless {
+	color: @color1;
+	background-color: @color13;
+}
+
+#wireless label {
+	padding: .1em;
+	margin: .2em .1em;
+}
+
+/* adding more padding on the sides, I tried to do it the easy way (it didn't work) */
+window#waybar box.horizontal.modules-left>widget:first-child>label {
+	margin-left: .9em;
+	margin-right: .3em;
+}
+
+window#waybar box.horizontal.modules-right>widget:last-child>label {
+	margin-left: .3em;
+	margin-right: .9em;
+}
