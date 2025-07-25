@@ -49,6 +49,7 @@ Some wallpapers [here](https://www.dropbox.com/scl/fo/ri8dvub93qzsub2zklz8o/AJ-5
 |  Super + P  |  Toggle pseudo float  |
 |  Super + F  |  Toggle float  |
 |  Super + J  |  Toggle split  |
+|  Super + H  |  Toggle opacity  |
 |  Super + Shift + F  |  Toggle fullscreen  |
 |  Super + Shift + Arrows  |  Move active window  |
 |  Super + Alt + Arrows  |  Resize active window  |
@@ -67,12 +68,12 @@ Some wallpapers [here](https://www.dropbox.com/scl/fo/ri8dvub93qzsub2zklz8o/AJ-5
 
 
 ## Demo
-![colors](./demo/colors.gif)
-![demo](./demo/demo.gif)
-![terminal](./demo/kitty.png)
-![swaync](./demo/swaync.png)
+![kitty](./demo/kitty.png)
 ![rofi](./demo/rofi.png)
-![wlogout](./demo/wlogout.png)
+![firefox](./demo/firefox.png)
+![terminal](./demo/mpris.png)
+![tschuss](./demo/tschuss.png)
+![wallpapers](./demo/wallpapers.png)
 
-## License ?
-Fully open source
+## License
+MIT Licence
